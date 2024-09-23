@@ -54,14 +54,7 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void display7SEG(int num)
-{
-	char led7seg[10] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
-	for (int i=0; i < 7; i++)
-	{
-	    HAL_GPIO_WritePin(GPIOA, SEG0_Pin<<i, (led7seg[num]>>i) & 1);
-	}
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -98,12 +91,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int count  = 0;
+  unsigned int ledPin[12] = {LED1_Pin, LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin};
+  HAL_GPIO_WritePin(GPIOA, LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 0);
+
+  unsigned int count = 0;
   while (1)
   {
-	  if (count >= 10) count = 0;
-	  display7SEG(count++);
+	  HAL_GPIO_WritePin (GPIOB , LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 0);
+	  HAL_GPIO_WritePin (GPIOB , ledPin[count], 1);
+	  count++;
+	  if (count == 12) count = 0;
 	  HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
