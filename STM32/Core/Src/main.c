@@ -60,12 +60,12 @@ void clearAllClock()
 }
 void setNumberOnClock(int num)
 {
-	unsigned int ledPin[12] = {LED1_Pin, LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin};
+	unsigned int ledPin[12] = {LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin, LED1_Pin};
 	HAL_GPIO_WritePin(GPIOB, ledPin[num], 1);
 }
 void clearNumberOnClock(int num)
 {
-	unsigned int ledPin[12] = {LED1_Pin, LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin};
+	unsigned int ledPin[12] = {LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin, LED1_Pin};
 	HAL_GPIO_WritePin(GPIOB, ledPin[num], 0);
 }
 /* USER CODE END 0 */
