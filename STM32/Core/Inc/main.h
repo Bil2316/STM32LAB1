@@ -62,6 +62,8 @@ void Error_Handler(void);
 #define LED_RED_GPIO_Port GPIOA
 #define LED_YELLOW_Pin GPIO_PIN_6
 #define LED_YELLOW_GPIO_Port GPIOA
+#define SEG0_Pin GPIO_PIN_7
+#define SEG0_GPIO_Port GPIOA
 #define LED1_Pin GPIO_PIN_0
 #define LED1_GPIO_Port GPIOB
 #define LED2_Pin GPIO_PIN_1
@@ -72,6 +74,18 @@ void Error_Handler(void);
 #define LED11_GPIO_Port GPIOB
 #define LED12_Pin GPIO_PIN_11
 #define LED12_GPIO_Port GPIOB
+#define SEG1_Pin GPIO_PIN_8
+#define SEG1_GPIO_Port GPIOA
+#define SEG2_Pin GPIO_PIN_9
+#define SEG2_GPIO_Port GPIOA
+#define SEG3_Pin GPIO_PIN_10
+#define SEG3_GPIO_Port GPIOA
+#define SEG4_Pin GPIO_PIN_11
+#define SEG4_GPIO_Port GPIOA
+#define SEG5_Pin GPIO_PIN_12
+#define SEG5_GPIO_Port GPIOA
+#define SEG6_Pin GPIO_PIN_13
+#define SEG6_GPIO_Port GPIOA
 #define LED4_Pin GPIO_PIN_3
 #define LED4_GPIO_Port GPIOB
 #define LED5_Pin GPIO_PIN_4
