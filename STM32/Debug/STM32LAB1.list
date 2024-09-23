@@ -112,7 +112,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  unsigned int ledPin[12] = {LED1_Pin, LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin};
+  unsigned int ledPin[12] = {LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin, LED1_Pin};
  800015e:	4b19      	ldr	r3, [pc, #100]	; (80001c4 <main+0x78>)
  8000160:	1d3c      	adds	r4, r7, #4
  8000162:	461d      	mov	r5, r3
