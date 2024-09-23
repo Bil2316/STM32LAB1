@@ -102,7 +102,7 @@ void setNumberOnClock(int num)
  8000166:	b08e      	sub	sp, #56	; 0x38
  8000168:	af00      	add	r7, sp, #0
  800016a:	6078      	str	r0, [r7, #4]
-	unsigned int ledPin[12] = {LED1_Pin, LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin};
+	unsigned int ledPin[12] = {LED2_Pin, LED3_Pin, LED10_Pin, LED11_Pin, LED12_Pin, LED4_Pin, LED5_Pin, LED6_Pin, LED7_Pin, LED8_Pin, LED9_Pin, LED1_Pin};
  800016c:	4b0e      	ldr	r3, [pc, #56]	; (80001a8 <setNumberOnClock+0x44>)
  800016e:	f107 0408 	add.w	r4, r7, #8
  8000172:	461d      	mov	r5, r3
