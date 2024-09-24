@@ -110,10 +110,31 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  clearAllClock();
+  int hour = 0;
+  int minute = 0;
+  int second = 0;
+
   while (1)
   {
-	  setTime(6, 15, 40);
+	  clearAllClock();
+	  if (second == 60)
+	  {
+		  minute++;
+		  second = 0;
+	  }
+	  if (minute == 60)
+	  {
+		  hour++;
+		  minute = 0;
+	  }
+	  if (hour == 12)
+	  {
+		  hour = 0;
+	  }
+	  setTime(hour, minute, second);
+
+	  second++;
+	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
