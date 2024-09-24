@@ -222,9 +222,9 @@ int main(void)
  8000224:	f000 fcc6 	bl	8000bb4 <HAL_GPIO_WritePin>
  8000228:	e03f      	b.n	80002aa <main+0x15e>
 	  }
-	  else if (count1 < 7)
+	  else if (count1 < 8)
  800022a:	687b      	ldr	r3, [r7, #4]
- 800022c:	2b06      	cmp	r3, #6
+ 800022c:	2b07      	cmp	r3, #7
  800022e:	dc1e      	bgt.n	800026e <main+0x122>
 	  {
 		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
@@ -232,13 +232,13 @@ int main(void)
  8000232:	2101      	movs	r1, #1
  8000234:	485e      	ldr	r0, [pc, #376]	; (80003b0 <main+0x264>)
  8000236:	f000 fcbd 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
- 800023a:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
+ 800023a:	2200      	movs	r2, #0
  800023c:	2102      	movs	r1, #2
  800023e:	485c      	ldr	r0, [pc, #368]	; (80003b0 <main+0x264>)
  8000240:	f000 fcb8 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
- 8000244:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
+ 8000244:	2201      	movs	r2, #1
  8000246:	2104      	movs	r1, #4
  8000248:	4859      	ldr	r0, [pc, #356]	; (80003b0 <main+0x264>)
  800024a:	f000 fcb3 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -248,13 +248,13 @@ int main(void)
  8000250:	2108      	movs	r1, #8
  8000252:	4857      	ldr	r0, [pc, #348]	; (80003b0 <main+0x264>)
  8000254:	f000 fcae 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 1);
- 8000258:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 0);
+ 8000258:	2200      	movs	r2, #0
  800025a:	2110      	movs	r1, #16
  800025c:	4854      	ldr	r0, [pc, #336]	; (80003b0 <main+0x264>)
  800025e:	f000 fca9 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 0);
- 8000262:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 1);
+ 8000262:	2201      	movs	r2, #1
  8000264:	2120      	movs	r1, #32
  8000266:	4852      	ldr	r0, [pc, #328]	; (80003b0 <main+0x264>)
  8000268:	f000 fca4 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -267,13 +267,13 @@ int main(void)
  8000270:	2101      	movs	r1, #1
  8000272:	484f      	ldr	r0, [pc, #316]	; (80003b0 <main+0x264>)
  8000274:	f000 fc9e 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
- 8000278:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
+ 8000278:	2201      	movs	r2, #1
  800027a:	2102      	movs	r1, #2
  800027c:	484c      	ldr	r0, [pc, #304]	; (80003b0 <main+0x264>)
  800027e:	f000 fc99 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
- 8000282:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
+ 8000282:	2200      	movs	r2, #0
  8000284:	2104      	movs	r1, #4
  8000286:	484a      	ldr	r0, [pc, #296]	; (80003b0 <main+0x264>)
  8000288:	f000 fc94 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -283,21 +283,21 @@ int main(void)
  800028e:	2108      	movs	r1, #8
  8000290:	4847      	ldr	r0, [pc, #284]	; (80003b0 <main+0x264>)
  8000292:	f000 fc8f 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 0);
- 8000296:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 1);
+ 8000296:	2201      	movs	r2, #1
  8000298:	2110      	movs	r1, #16
  800029a:	4845      	ldr	r0, [pc, #276]	; (80003b0 <main+0x264>)
  800029c:	f000 fc8a 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 1);
- 80002a0:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 0);
+ 80002a0:	2200      	movs	r2, #0
  80002a2:	2120      	movs	r1, #32
  80002a4:	4842      	ldr	r0, [pc, #264]	; (80003b0 <main+0x264>)
  80002a6:	f000 fc85 	bl	8000bb4 <HAL_GPIO_WritePin>
 	  }
 
-	  if (count2 < 2)
+	  if (count2 < 3)
  80002aa:	683b      	ldr	r3, [r7, #0]
- 80002ac:	2b01      	cmp	r3, #1
+ 80002ac:	2b02      	cmp	r3, #2
  80002ae:	dc22      	bgt.n	80002f6 <main+0x1aa>
 	  {
 		  HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin, 0);
@@ -305,13 +305,13 @@ int main(void)
  80002b2:	2140      	movs	r1, #64	; 0x40
  80002b4:	483e      	ldr	r0, [pc, #248]	; (80003b0 <main+0x264>)
  80002b6:	f000 fc7d 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 1);
- 80002ba:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 0);
+ 80002ba:	2200      	movs	r2, #0
  80002bc:	2180      	movs	r1, #128	; 0x80
  80002be:	483c      	ldr	r0, [pc, #240]	; (80003b0 <main+0x264>)
  80002c0:	f000 fc78 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 0);
- 80002c4:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 1);
+ 80002c4:	2201      	movs	r2, #1
  80002c6:	f44f 7180 	mov.w	r1, #256	; 0x100
  80002ca:	4839      	ldr	r0, [pc, #228]	; (80003b0 <main+0x264>)
  80002cc:	f000 fc72 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -321,13 +321,13 @@ int main(void)
  80002d2:	f44f 7100 	mov.w	r1, #512	; 0x200
  80002d6:	4836      	ldr	r0, [pc, #216]	; (80003b0 <main+0x264>)
  80002d8:	f000 fc6c 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 1);
- 80002dc:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 0);
+ 80002dc:	2200      	movs	r2, #0
  80002de:	f44f 6180 	mov.w	r1, #1024	; 0x400
  80002e2:	4833      	ldr	r0, [pc, #204]	; (80003b0 <main+0x264>)
  80002e4:	f000 fc66 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 0);
- 80002e8:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 1);
+ 80002e8:	2201      	movs	r2, #1
  80002ea:	f44f 6100 	mov.w	r1, #2048	; 0x800
  80002ee:	4830      	ldr	r0, [pc, #192]	; (80003b0 <main+0x264>)
  80002f0:	f000 fc60 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -343,13 +343,13 @@ int main(void)
  80002fe:	2140      	movs	r1, #64	; 0x40
  8000300:	482b      	ldr	r0, [pc, #172]	; (80003b0 <main+0x264>)
  8000302:	f000 fc57 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 0);
- 8000306:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 1);
+ 8000306:	2201      	movs	r2, #1
  8000308:	2180      	movs	r1, #128	; 0x80
  800030a:	4829      	ldr	r0, [pc, #164]	; (80003b0 <main+0x264>)
  800030c:	f000 fc52 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 1);
- 8000310:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 0);
+ 8000310:	2200      	movs	r2, #0
  8000312:	f44f 7180 	mov.w	r1, #256	; 0x100
  8000316:	4826      	ldr	r0, [pc, #152]	; (80003b0 <main+0x264>)
  8000318:	f000 fc4c 	bl	8000bb4 <HAL_GPIO_WritePin>
@@ -359,13 +359,13 @@ int main(void)
  800031e:	f44f 7100 	mov.w	r1, #512	; 0x200
  8000322:	4823      	ldr	r0, [pc, #140]	; (80003b0 <main+0x264>)
  8000324:	f000 fc46 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 0);
- 8000328:	2200      	movs	r2, #0
+		  HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 1);
+ 8000328:	2201      	movs	r2, #1
  800032a:	f44f 6180 	mov.w	r1, #1024	; 0x400
  800032e:	4820      	ldr	r0, [pc, #128]	; (80003b0 <main+0x264>)
  8000330:	f000 fc40 	bl	8000bb4 <HAL_GPIO_WritePin>
-		  HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 1);
- 8000334:	2201      	movs	r2, #1
+		  HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 0);
+ 8000334:	2200      	movs	r2, #0
  8000336:	f44f 6100 	mov.w	r1, #2048	; 0x800
  800033a:	481d      	ldr	r0, [pc, #116]	; (80003b0 <main+0x264>)
  800033c:	f000 fc3a 	bl	8000bb4 <HAL_GPIO_WritePin>
