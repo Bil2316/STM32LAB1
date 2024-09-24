@@ -85,15 +85,15 @@ void clearAllClock()
 {
  800014c:	b580      	push	{r7, lr}
  800014e:	af00      	add	r7, sp, #0
-	HAL_GPIO_WritePin(GPIOA, LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 0);
- 8000150:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOB, LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 1);
+ 8000150:	2201      	movs	r2, #1
  8000152:	f640 71ff 	movw	r1, #4095	; 0xfff
  8000156:	4802      	ldr	r0, [pc, #8]	; (8000160 <clearAllClock+0x14>)
  8000158:	f000 fc48 	bl	80009ec <HAL_GPIO_WritePin>
 }
  800015c:	bf00      	nop
  800015e:	bd80      	pop	{r7, pc}
- 8000160:	40010800 	.word	0x40010800
+ 8000160:	40010c00 	.word	0x40010c00
 
 08000164 <setNumberOnClock>:
 void setNumberOnClock(int num)
@@ -112,14 +112,14 @@ void setNumberOnClock(int num)
  800017a:	c40f      	stmia	r4!, {r0, r1, r2, r3}
  800017c:	e895 000f 	ldmia.w	r5, {r0, r1, r2, r3}
  8000180:	e884 000f 	stmia.w	r4, {r0, r1, r2, r3}
-	HAL_GPIO_WritePin(GPIOB, ledPin[num], 1);
+	HAL_GPIO_WritePin(GPIOB, ledPin[num], 0);
  8000184:	687b      	ldr	r3, [r7, #4]
  8000186:	009b      	lsls	r3, r3, #2
  8000188:	f107 0238 	add.w	r2, r7, #56	; 0x38
  800018c:	4413      	add	r3, r2
  800018e:	f853 3c30 	ldr.w	r3, [r3, #-48]
  8000192:	b29b      	uxth	r3, r3
- 8000194:	2201      	movs	r2, #1
+ 8000194:	2200      	movs	r2, #0
  8000196:	4619      	mov	r1, r3
  8000198:	4804      	ldr	r0, [pc, #16]	; (80001ac <setNumberOnClock+0x48>)
  800019a:	f000 fc27 	bl	80009ec <HAL_GPIO_WritePin>
