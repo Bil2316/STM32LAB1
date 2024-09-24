@@ -85,8 +85,8 @@ void clearAllClock()
 {
  800014c:	b580      	push	{r7, lr}
  800014e:	af00      	add	r7, sp, #0
-	  HAL_GPIO_WritePin (GPIOB , LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 0);
- 8000150:	2200      	movs	r2, #0
+	  HAL_GPIO_WritePin(GPIOB , LED1_Pin | LED2_Pin | LED3_Pin | LED4_Pin | LED5_Pin | LED6_Pin | LED7_Pin | LED8_Pin | LED9_Pin | LED10_Pin | LED11_Pin | LED12_Pin, 1);
+ 8000150:	2201      	movs	r2, #1
  8000152:	f640 71ff 	movw	r1, #4095	; 0xfff
  8000156:	4802      	ldr	r0, [pc, #8]	; (8000160 <clearAllClock+0x14>)
  8000158:	f000 fc14 	bl	8000984 <HAL_GPIO_WritePin>
