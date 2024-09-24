@@ -56,12 +56,18 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN 0 */
 void display7SEG(int num)
 {
-	char led7seg[10] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
-	for (int i=0; i < 7; i++)
-	{
-	    HAL_GPIO_WritePin(GPIOA, SEG0_Pin<<i, (led7seg[num]>>i) & 1);
-	}
+    char led7seg[10] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
+
+    // Manually writing the value of each segment pin without a loop
+    HAL_GPIO_WritePin(SEG0_GPIO_Port, SEG0_Pin, (led7seg[num] >> 0) & 1); // SEG0
+    HAL_GPIO_WritePin(SEG1_GPIO_Port, SEG1_Pin, (led7seg[num] >> 1) & 1); // SEG1
+    HAL_GPIO_WritePin(SEG2_GPIO_Port, SEG2_Pin, (led7seg[num] >> 2) & 1); // SEG2
+    HAL_GPIO_WritePin(SEG3_GPIO_Port, SEG3_Pin, (led7seg[num] >> 3) & 1); // SEG3
+    HAL_GPIO_WritePin(SEG4_GPIO_Port, SEG4_Pin, (led7seg[num] >> 4) & 1); // SEG4
+    HAL_GPIO_WritePin(SEG5_GPIO_Port, SEG5_Pin, (led7seg[num] >> 5) & 1); // SEG5
+    HAL_GPIO_WritePin(SEG6_GPIO_Port, SEG6_Pin, (led7seg[num] >> 6) & 1); // SEG6
 }
+
 /* USER CODE END 0 */
 
 /**
